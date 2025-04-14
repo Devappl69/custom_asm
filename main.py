@@ -3,14 +3,14 @@ import sys
 if len(sys.argv)>1:
     program_file = sys.argv[1]
 else:
-    program_file = input("Enter path to file: ")
-    #program_file = "examples/program5.txt"
+    #program_file = input("Enter path to file: ")
+    program_file = "program6.txt"
 
 pointer = 0
 ASM_stack = []
 ASM_labels = {}
 
-verbose = False
+verbose = True
 max_iterations = 1000
 iteration_count = 0
 
@@ -88,6 +88,24 @@ def ASM_rot() -> None:
 def ASM_pick(x: int) -> None:
     ASM_stack.append(ASM_stack[int(x)])
 
+def ASM_mul() -> None:
+    if len(ASM_stack) > 1:
+        x = ASM_pop()
+        y = ASM_pop()
+        ASM_push(x*y)
+    else:
+        print("Not enough items in stack to multiply")
+        quit()
+
+def ASM_div() -> None:
+    if len(ASM_stack) > 1:
+        x = ASM_pop()
+        y = ASM_pop()
+        ASM_push(y/x)
+    else:
+        print("Not enough items in stack to divide")
+        quit()
+
 commands = {
     "PUSH": ASM_push,
     "POP": ASM_pop,
@@ -105,6 +123,8 @@ commands = {
     "SWAP": ASM_swap,
     "ROT": ASM_rot,
     "PICK": ASM_pick,
+    "MUL": ASM_mul,
+    "DIV": ASM_div,
 }
 
 
@@ -126,11 +146,11 @@ for index, line in enumerate(lines):
                     ASM_labels[line_contents[0][:-1]] = index
                     if verbose: print("Current labels:", ASM_labels)
                 else:
-                    print("Command not recognized", index, line_contents)
+                    print(f"Error: Command '{line_contents[0]}' not recognized, line {index+1}")
                     quit()
     else:
         if (line_contents[0] not in commands) and (line_contents[0] != "HALT") and (line_contents[0] != ""):
-            print("Command not recognized", index, line_contents)
+            print(f"Error: Command '{line_contents[0]}' not recognized, line {index+1}")
             quit()
 
 while iteration_count < max_iterations:

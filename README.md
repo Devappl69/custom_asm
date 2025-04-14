@@ -1,5 +1,6 @@
-# Custom ASM Language
+# Custom ASM Interpreter
 My own custom assembly-like language, that is mostly stack-based
+
 
 
 # Usage
@@ -7,6 +8,7 @@ My own custom assembly-like language, that is mostly stack-based
 `python main.py PATH_TO_FILE`
 ### Using Python Inputs
 `python main.py` and enter file path in the prompt
+
 
 
 # Commands
@@ -41,3 +43,13 @@ My own custom assembly-like language, that is mostly stack-based
 ## Special
 - LABEL (`label:`): Defines a label by using the ':' sign after its name
 - HALT (`halt`): Halts the program, every program must have at least one of these
+
+
+
+# Roadmap
+- Logging
+- Verbose sys arguments
+- Better error handling
+- Comments
+- Goto line #
+- Compiling

@@ -39,6 +39,7 @@ My own custom assembly-like language, that is mostly stack-based
 - SWAP (`ASM_swap()`): Swaps the 2 items in the stack, who's index corresponds to the 2 top-most items in the stack
 - ROT (`ASM_rot()`): Reverses the stack
 - PICK (`ASM_pick(index)`): Pushes the items to the stack, who's index corresponds to the top-most item of the stack
+- ROLL (`ASM_roll(n)`): Shifts the array by n spaces
 
 ## Special
 - LABEL (`LABEL_NAME:`): Defines a label by using the ':' sign after its name
@@ -51,4 +52,5 @@ My own custom assembly-like language, that is mostly stack-based
 - Better error handling
 - Goto line n
 - Compiling
-- Roll command (moving everything n spaces with wrapping)
+- Getting string input and converting it to ASCII code or something
+- Outputting characters from turning int into ASCII code

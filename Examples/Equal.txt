@@ -1,0 +1,10 @@
+READ # Reads user input
+READ # Reads user input
+SUB # Subtracts the second from the first user input
+JUMP.EQ.0 EQUAL # Jumps to the "equal" label if the result of the subtraction is 0
+PRINT "not equal" # If it doesn't jump to the EQUAL label, it prints "not equal"
+HALT # Stops the program
+
+EQUAL: # The EQUAL label
+PRINT "equal" # Prints "equal"
+HALT # Stops the program

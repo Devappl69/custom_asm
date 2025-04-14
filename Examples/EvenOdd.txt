@@ -1,5 +1,5 @@
 READ # Reads user input
-JUMP.EQ.0 L1 # Jumps to the EVEN label if the input is 0
+JUMP.EQ.0 EVEN # Jumps to the EVEN label if the input is 0
 
 LOOP: # The LOOP label
 PUSH 2 # Pushes 2 to the stack

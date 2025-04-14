@@ -49,5 +49,6 @@ My own custom assembly-like language, that is mostly stack-based
 # Roadmap
 - Logging
 - Better error handling
-- Goto line #
+- Goto line n
 - Compiling
+- Roll command (moving everything n spaces with wrapping)

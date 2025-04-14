@@ -1,0 +1,14 @@
+READ # Reads user input
+SIZE # Pushes the size of the stack to the stack, in this case 1 (the stack after this operation will look like this [USER_INPUT, 1])
+PUSH 3 # Pushes the integer 3 to the stack (in this program, this is the number of times it will ask for user input)
+SUB # Subtracts 3 from the user input
+
+LOOP: # The LOOP label
+POP # Pops/deletes the top item from the stack
+READ # Reads user input
+SIZE # Pushes the size of the stack to the stack
+PUSH 3 # Pushes the integer 3 to the stack (in this program, this is the number of times it will ask for user input)
+SUB # Subtracts 3 from the size
+JUMP.LT.0 LOOP # Jumps to the LOOP label if the result is below 0
+POP # Deletes/pops the top-most thing in the stack
+HALT # Stops the program

@@ -1,6 +1,7 @@
 # Custom ASM Language
 My own custom assembly-like language, that is mostly stack-based
 
+
 # Usage
 ### Using Arguments
 `python main.py PATH_TO_FILE`
@@ -12,10 +13,14 @@ My own custom assembly-like language, that is mostly stack-based
 ## Default
 - PUSH (`ASM_push(item)`): Pushes an item to the stack
 - POP (`ASM_pop()`): Removes the top-most item from the stack and returns it
-- ADD (`ASM_add()`): Adds the 2 top-most items from the stack, pops them, and then pushes the output
-- SUB (`ASM_sub()`): Subtracts the top-most from the second top-most items from the stack, pops them, and then pushes the output
 - PRINT (`ASM_print(string_literal)`): Prints out the given string
 - READ (`ASM_read()`): Reads the input and pushes it to the stack
+
+## Arithmetic
+- ADD (`ASM_add()`): Adds the 2 top-most items from the stack, pops them, and then pushes the output
+- SUB (`ASM_sub()`): Subtracts the top-most from the second top-most items from the stack, pops them, and then pushes the output
+- MUL (`ASM_mul()`): Multiplies the 2 top-most items from the stack, pops them, and then pushes the output
+- DIV (`ASM_div()`): Divides the top-most by the second top-most items from the stack, pops them, and then pushes the output
 
 ## Jumps
 - JUMP.EQ.0 (`ASM_JUMP_EQ_0(label)`): Jumps to the given label if the top-most item in the stack is equal to 0

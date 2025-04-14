@@ -1,0 +1,3 @@
+READ # Reads user input
+OUT # Pops and outputs the top-most item of the stack (which in this case is what the user just inputted)
+HALT # Stops the program

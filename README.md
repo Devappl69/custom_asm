@@ -1,14 +1,14 @@
-# custom_language
-My own custom stack-like language
+# Custom ASM Language
+My own custom assembly-like language, that is mostly stack-based
 
 # Usage
+### Using Arguments
 `python main.py PATH_TO_FILE`
-or
+### Using Python Inputs
 `python main.py` and enter file path in the prompt
 
 
 # Commands
-
 - PUSH (`ASM_push(item)`): Pushes an item to the stack
 - POP (`ASM_pop()`): Removes the top-most item from the stack and returns it
 - ADD (`ASM_add()`): Adds the 2 top-most items from the stack, pops them, and then pushes the output

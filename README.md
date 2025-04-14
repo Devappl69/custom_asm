@@ -51,8 +51,7 @@ My own custom assembly-like language, that is mostly stack-based
 # Roadmap
 - Logging
 - Better error handling
-- Goto line n
 - Compiling
 - Getting string input and converting it to ASCII code or something
 - Outputting characters from turning int into ASCII code
-- Line index number and arithmetic order parity
+- parity in line index number and arithmetic order

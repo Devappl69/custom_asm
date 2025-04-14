@@ -1,0 +1,17 @@
+PUSH 1 # Pushes the integer 1 to the stack
+PUSH 2 # Pushes the integer 2 to the stack
+PUSH 3 # Pushes the integer 3 to the stack
+PUSH 4 # Pushes the integer 4 to the stack
+PUSH 5 # Pushes the integer 5 to the stack
+
+PUSH 0  # Pushes the integer 0 to the stack (this will be the index of the first value to swap)
+PUSH 4  # Pushes the integer 4 to the stack (this will be the index of the second value to swap)
+SWAP # Swaps the items at index 0 and index 4 of the stack
+
+ROT # Rotates/reverses the stack
+
+ROLL 1 # Shifts the entire stack by 1 space
+
+PICK 0 # Gets the thing at the index 0 of the stack and duplicates it to the top
+
+HALT # Stops the program

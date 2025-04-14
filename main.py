@@ -6,10 +6,9 @@ verbose = False
 if len(sys.argv)>1:
     program_file = sys.argv[1]
     if len(sys.argv)>2:
-        verbose = True if (str(sys.argv[2]).lower() in ["t", "true", "1"]) else False
+        verbose = True if (str(sys.argv[2]).lower() in ["t", "true", "1", "y", "yes", "v", "verbose", "-v"]) else False
 else:
-    #program_file = input("Enter path to file: ")
-    pass
+    program_file = input("Enter path to file: ")
 
 pointer = 0
 ASM_stack = []
@@ -110,6 +109,10 @@ def ASM_div() -> None:
         print("Not enough items in stack to divide")
         quit()
 
+def ASM_roll(n: int) -> None:
+    global ASM_stack
+    ASM_stack = list(ASM_stack[-int(n):] + ASM_stack[:-int(n)])
+
 commands = {
     "PUSH": ASM_push,
     "POP": ASM_pop,
@@ -129,6 +132,7 @@ commands = {
     "PICK": ASM_pick,
     "MUL": ASM_mul,
     "DIV": ASM_div,
+    "ROLL": ASM_roll,
 }
 
 

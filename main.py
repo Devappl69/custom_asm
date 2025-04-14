@@ -1,16 +1,20 @@
 import sys
 
+program_file = "examples/Cat.txt"
+verbose = False
+
 if len(sys.argv)>1:
     program_file = sys.argv[1]
+    if len(sys.argv)>2:
+        verbose = True if (str(sys.argv[2]).lower() in ["t", "true", "1"]) else False
 else:
     #program_file = input("Enter path to file: ")
-    program_file = "program6.txt"
+    pass
 
 pointer = 0
 ASM_stack = []
 ASM_labels = {}
 
-verbose = True
 max_iterations = 1000
 iteration_count = 0
 
@@ -136,7 +140,14 @@ with open(program_file) as file:
         quit()
 
 for index, line in enumerate(lines):
+    if "#" in line:
+        comment_index = (line.index("#")+2)-2
+        line = lines[index][:comment_index]
+        if verbose: print("Found comment on line", index+1)
+    
+    line = line.strip()
     line_contents = line.split(" ")
+    lines[index] = line
     
     if line_contents[0]:
         if (len(line_contents) == 1):
@@ -155,7 +166,6 @@ for index, line in enumerate(lines):
 
 while iteration_count < max_iterations:
     line_contents = lines[pointer].split(" ")
-
     opcode = line_contents[0]
     
     if (opcode == "HALT"):

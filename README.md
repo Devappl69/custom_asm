@@ -5,7 +5,7 @@ My own custom assembly-like language, that is mostly stack-based
 
 # Usage
 ### Using Arguments
-`python main.py PATH_TO_FILE`
+`python main.py PATH_TO_FILE VERBOSE_MODE_Y/N`
 ### Using Python Inputs
 `python main.py` and enter file path in the prompt
 
@@ -41,15 +41,13 @@ My own custom assembly-like language, that is mostly stack-based
 - PICK (`ASM_pick(index)`): Pushes the items to the stack, who's index corresponds to the top-most item of the stack
 
 ## Special
-- LABEL (`label:`): Defines a label by using the ':' sign after its name
-- HALT (`halt`): Halts the program, every program must have at least one of these
-
+- LABEL (`LABEL_NAME:`): Defines a label by using the ':' sign after its name
+- HALT (`HALT`): Halts the program, every program must have at least one of these
+- COMMENT (`#`): Anything written after this sign will be ignored, currently even in print statements
 
 
 # Roadmap
 - Logging
-- Verbose sys arguments
 - Better error handling
-- Comments
 - Goto line #
 - Compiling

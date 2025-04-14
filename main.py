@@ -113,6 +113,10 @@ def ASM_roll(n: int) -> None:
     global ASM_stack
     ASM_stack = list(ASM_stack[-int(n):] + ASM_stack[:-int(n)])
 
+def ASM_jump_line_n(n: int) -> None:
+    global pointer
+    pointer = int(n-1)
+
 commands = {
     "PUSH": ASM_push,
     "POP": ASM_pop,
@@ -133,6 +137,7 @@ commands = {
     "MUL": ASM_mul,
     "DIV": ASM_div,
     "ROLL": ASM_roll,
+    "JUMP.LINE.N": ASM_jump_line_n,
 }
 
 

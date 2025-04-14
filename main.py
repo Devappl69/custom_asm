@@ -3,13 +3,14 @@ import sys
 if len(sys.argv)>1:
     program_file = sys.argv[1]
 else:
-    program_file = "examples/program5.txt"
+    program_file = input("Enter path to file: ")
+    #program_file = "examples/program5.txt"
 
 pointer = 0
 ASM_stack = []
 ASM_labels = {}
 
-verbose = True
+verbose = False
 max_iterations = 1000
 iteration_count = 0
 

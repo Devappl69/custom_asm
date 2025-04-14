@@ -28,7 +28,7 @@ My own custom assembly-like language, that is mostly stack-based
 - JUMP.EQ.0 (`ASM_JUMP_EQ_0(label)`): Jumps to the given label if the top-most item in the stack is equal to 0
 - JUMP.GT.0 (`ASM_JUMP_GT_0(label)`): Jumps to the given label if the top-most item in the stack is greater than to 0
 - JUMP.LT.0 (`ASM_JUMP_LT_0(label)`): Jumps to the given label if the top-most item in the stack is lower than to 0
-- JUMP.LINE.N (`ASM_jump_line_n(n)`): Jumps to line n
+- JUMP.LINE.N (`ASM_jump_line_n(n)`): Jumps to line with the index of the given argument n
 
 ## Other
 - SIZE (`ASM_size()`): Pushes the stack size to the stack
@@ -55,3 +55,5 @@ My own custom assembly-like language, that is mostly stack-based
 - Getting string input and converting it to ASCII code or something
 - Outputting characters from turning int into ASCII code
 - parity in line index number and arithmetic order
+- Optimization
+- Code run statistics (run time, iteratoins per second, etc.)

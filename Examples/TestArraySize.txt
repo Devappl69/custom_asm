@@ -1,0 +1,9 @@
+PUSH 1 # Pushes 1 to the stack
+PUSH 2 # Pushes 2 to the stack
+PUSH 3 # Pushes 3 to the stack
+SIZE # Pushes the size of the stack to the stack
+OUT # Pops and prints the top item from the stack
+OUT # Pops and prints the top item from the stack
+SIZE # Pushes the size of the stack to the stack
+OUT # Pops and prints the top item from the stack
+HALT # Stops the program
